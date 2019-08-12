@@ -15,11 +15,23 @@ class App extends PureComponent {
     prevCardId: -1
   };
 
-  static duplicateCard = () => {
-    return [0,1,2,3,4,5,6,7].reduce((preValue, current, index, array) => {
-      return preValue.concat([current, current])
-    },[]);
-  };
+// duplicateCard method for duplicating the array of card numbers. This is because each card 
+// number should have a duplicate. The duplicateCard method will return an array 
+// of length 16 which is [0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7]. This array is randomised 
+// it is passed to the state object shuffledCard.
+  static duplicateCard = () => 
+    {
+      return [0,1,2,3,4,5,6,7].reduce((preValue, current, index, array) => 
+        {
+          return preValue.concat([current, current])
+        },[]);
+    };
+
+// handleClick contains the method for flipping card when it is clicked on to reveal 
+// the card number. The method changes the isFlippedstate of the card to true and 
+// prevents a card that is already flipped from responding to the click event. From
+// check if the number of flipped cards is two so player can check if the two cards
+// are a match.  
 
   handleClick = event => {
     event.preventDefault();
@@ -48,6 +60,9 @@ class App extends PureComponent {
     }
   };
 
+  // isCardMatch method checks if the two flipped cards are a match. This method is
+  // called in handleClick (see above). The setTimeout method used while setting the 
+  // state is so that the card flip will not be abrupt.
   isCardMatch = (card1, card2, card1Id, card2Id) => {
     if (card1 === card2) {
       const hideCard = this.state.shuffledCard.slice();
@@ -68,6 +83,8 @@ class App extends PureComponent {
     }
   };
 
+
+ // restartGame method. This method resets the game’s state.
   restartGame = () => {
     this.setState({
       isFlipped: Array(16).fill(false),
@@ -78,10 +95,17 @@ class App extends PureComponent {
     });
   };
 
+
+// checks to see if the game is over. If the game is over, the GameOver component 
+// is displayed.
   isGameOver = () => {
     return this.state.isFlipped.every((element, index, array) => element !== false);
   };
 
+
+// the render method passes the Header component to restartGame props. 
+// The isGameOver method is used to render the GameOver component when the game 
+// is over otherwise, the Card component is rendered.
   render() {
     return (
      <div>
