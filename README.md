@@ -14,7 +14,9 @@ For this assignment, I was to create a memory game with React. This assignment r
 
 # Minimum Requirements
 This assignment must be deployed and Hosted on Github and Heroku. 
-# Github Link: 
 # Heroku Link: 
 
 
+
+# Technologies used:
+- React
