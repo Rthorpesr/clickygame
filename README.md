@@ -20,3 +20,5 @@ This assignment must be deployed and Hosted on Github and Heroku.
 
 # Technologies used:
 - React
+
+![](public/images/Quarterback%20Challenge.jpg)
