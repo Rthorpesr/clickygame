@@ -32,21 +32,7 @@ body {
     text-align: center;
   }
   
-  .timer {
-    color: #970c2f;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .restart-button {
-    width: 15em;
-    height: 3em;
-    color: white;
-    background-color: #0aec15;
-    border: 0;
-  }
-  
-  .game-status-text {
+ .game-status-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(24, 21, 16);
     font-weight: bold;

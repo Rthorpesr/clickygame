@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
 import './App.css';
 import PictureCard from "./components/PictureCard";
 import Wrapper from "./components/Wrapper";
@@ -24,14 +23,14 @@ class App extends Component {
     // empty clickeadArray, end of if block
     if (this.state.clickedArray.includes(id)) {
       this.setState({ score: 0, clickedArray: [], 
-        message: "Incorrect!! Game Over ☹️ Click an image to start again!", 
-        shakeit: "true"});
+        message: "Incorrect!! Game Over Click page reset to start again!", 
+        shakeit: "true"}); 
     }
     else {
       this.setState({
         clickedArray: this.state.clickedArray.concat([id]),
         score: this.state.score + 1,
-        message: "Correct!! 🙂",
+        message: "Correct!!",
         shakeit: "false"
       });
     }
@@ -52,10 +51,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h2 className="App-title">Welcome to Reggie's Clicky Game!!</h2>
+          <h2 className="App-title">NFL Quarterback Challenge!!</h2>
         </header>
         <h3 className="App-intro">
-          <strong>Click on an image to earn points, but don't click on any, more 
+          <strong>Click on an QB to earn points, but don't click on any, more 
                   than once!</strong> 
           <p className = "score"><strong>Score: {this.state.score} | 
                           TopScore: {this.state.topScore}</strong></p>
