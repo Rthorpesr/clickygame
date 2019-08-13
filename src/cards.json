@@ -12,12 +12,12 @@
     {
         "id": 3,
         "name": "arizona",
-        "image": "./images/arizona.jpg "
+        "image": "./images/arizona.jpg"
     },
     {
         "id": 4,
         "name": "dallas",
-        "image": "./images/dallas.jpg "
+        "image": "./images/dallas.png"
     },
     {
         "id": 5,
@@ -36,23 +36,23 @@
     },
     {
         "id": 8,
-        "name": "mami",
-        "image": "./images/mami.jpg"
+        "name": "miami",
+        "image": "./images/miami.jpg"
     },
     {
         "id": 9,
         "name": "newengland",
-        "image": "./newengland.jpg"
+        "image": "./images/newengland.jpg"
     },
     {
         "id": 10,
         "name": "newyork",
-        "image": "./images/newyork.jpg"
+        "image": "./images/newyork.png"
     },
     {
         "id": 11,
         "name": "northcarolina",
-        "image": "./
+        "image": "./images/northcarolina.jpg"
     },
     {
         "id": 12,
@@ -77,6 +77,6 @@
     {
         "id": 16,
         "name": "neworleans",
-        "image": "./neworleans.jpg"
+        "image": "./images/neworleans.jpg"
     }
 ]

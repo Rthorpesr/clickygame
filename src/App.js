@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import PictureCard from "./components/PictureCard";
 import Wrapper from "./components/Wrapper";
@@ -19,9 +19,13 @@ class App extends Component {
     // Arrange the pictures in a random manner
     const shuffledArray = this.shuffleArray(cards);
     this.setState({cards: shuffledArray});
-    // if clicked an image already clicked set this.state.score = 0; empty clickeadArray, end of if block
+    
+    // if clicked an image already clicked set this.state.score = 0;
+    // empty clickeadArray, end of if block
     if (this.state.clickedArray.includes(id)) {
-      this.setState({ score: 0, clickedArray: [], message: "Incorrect!! Game Over ☹️ Click an image to start again!", shakeit: "true"});
+      this.setState({ score: 0, clickedArray: [], 
+        message: "Incorrect!! Game Over ☹️ Click an image to start again!", 
+        shakeit: "true"});
     }
     else {
       this.setState({
@@ -48,12 +52,13 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React Clicky Game!!</h1>
+          <h2 className="App-title">Welcome to Reggie's Clicky Game!!</h2>
         </header>
         <h3 className="App-intro">
-          <strong>Click on an image to earn points, but don't click on any, more than once!</strong> 
-          <p className = "score"><strong>Score: {this.state.score} | TopScore: {this.state.topScore}</strong></p>
+          <strong>Click on an image to earn points, but don't click on any, more 
+                  than once!</strong> 
+          <p className = "score"><strong>Score: {this.state.score} | 
+                          TopScore: {this.state.topScore}</strong></p>
           <p className="message"><strong>{this.state.message}</strong></p>
         </h3>
         <Wrapper
@@ -71,7 +76,8 @@ class App extends Component {
         />
         <footer className="footer">
       <div className="container">
-        <span className="text-muted">&copy;Shama - Clicky Game - React app.</span>
+        <span className="text-muted">&copy; R. Thorpe - Clicky Game - 
+                                            React app 2019.</span>
       </div>
     </footer> 
       </div>
